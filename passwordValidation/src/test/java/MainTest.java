@@ -49,5 +49,14 @@ public class MainTest {
         assertTrue(actual,password);
     }
 
+    @Test
+    public void testgenerateRandomSecurePassword(){
+        String password = "haman21H?";
+       String  actual = Main.passwordValidationGenerateRandomSecurePasswords("");
+        assertEquals(password,actual);
+
+
+    }
+
 
 }

@@ -1,6 +1,8 @@
 package org.example;
 
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -74,6 +76,17 @@ public class Main {
         }
 
         return false;
+    }
+
+    public static String  passwordValidationGenerateRandomSecurePasswords(String password){
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@?+-#$%&";
+        StringBuilder passwordBuilder = new StringBuilder();
+        Random random = new Random();
+        for(int i=0;i<8; i++){
+            passwordBuilder.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        return passwordBuilder.toString();
+
     }
 }
 
