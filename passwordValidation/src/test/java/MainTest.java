@@ -1,6 +1,7 @@
 import org.example.Main;
 import org.junit.jupiter.api.Test;
 
+import static java.lang.Math.random;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -51,9 +52,10 @@ public class MainTest {
 
     @Test
     public void testgenerateRandomSecurePassword(){
-        String password = "haman21H?";
-       String  actual = Main.passwordValidationGenerateRandomSecurePasswords("");
-        assertEquals(password,actual);
+        //String password  = "";
+
+       boolean  actual = Main.passwordValidationGenerateRandomSecurePasswords();
+        assertTrue(actual);
 
 
     }
