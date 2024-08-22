@@ -64,6 +64,17 @@ public class Main {
     }
 
 
+    public static boolean passwordValidationSpecialCharacterCheck(String password) {
+        char[] speciaCharacter = {'@','#','!','$','%','^','+','-'};
+        for(char c:speciaCharacter){
+            if(password.contains(String.valueOf(c))){
+                return true;
+            }
+
+        }
+
+        return false;
+    }
 }
 
 //regex = “^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$”

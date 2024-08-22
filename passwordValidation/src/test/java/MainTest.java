@@ -42,6 +42,12 @@ public class MainTest {
         assertTrue(actual,Password);
     }
 
+    @Test
+    public void testpasswordWhenContainSpecialCharacters(){
+        String password = "Kombina12";
+        boolean actual = Main.passwordValidationSpecialCharacterCheck("gomber214!");
+        assertTrue(actual,password);
+    }
 
 
 }
